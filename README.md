@@ -1,2 +1,6 @@
-# eecs4314MYSQL
-This is for the assignemnt
+# Group List        
+Ante Pimentel     cse23181      
+Dusan Birtasevic  cse13213      
+Francis Okoyo     
+Hashim Al-Helli   
+Richard Unn
