@@ -1,6 +1,6 @@
 # EECS 4314
 # We are Prestige Worldwide
-this group consists of:
+this group consists of:   
 Ante Pimentel:     cse23181      
 Dusan Birtasevic:  cse13213      
 Francis Okoyo:     franciso     
