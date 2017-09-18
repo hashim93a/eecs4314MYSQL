@@ -10,5 +10,5 @@ Richard Van
 
 # Links
 Course Webpage : https://wiki.eecs.yorku.ca/course_archive/2017-18/F/4314/    
-Course Forum : https://forum.eecs.yorku.ca/viewforum.php?f=344
+Course Forum : https://forum.eecs.yorku.ca/viewforum.php?f=344  
 Discord : https://discord.gg/t8bpww
