@@ -1,1 +1,1 @@
-#this folder contains all the assaignments for this course
+# This folder contains all the assaignments for this course
