@@ -8,7 +8,7 @@ Hashim Al-Helli
 Richard Van
 
 # Presentations
-MySQL Conceptual Architecture: 
+MySQL Conceptual Architecture: https://github.com/hashim93a/eecs4314MYSQL/raw/master/Assignments/Assignment1/Conceptual%20Architecture%20Presentation.zip
 
 # Links
 Course Webpage : https://wiki.eecs.yorku.ca/course_archive/2017-18/F/4314/    
