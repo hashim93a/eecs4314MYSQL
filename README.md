@@ -8,7 +8,7 @@ Hashim Al-Helli
 Richard Van
 
 # Presentations
-MySQL Conceptual Architecture: https://github.com/hashim93a/eecs4314MYSQL/raw/master/Assignments/Assignment1/MySQL%20Conceptual%20Architecture.pptx
+MySQL Conceptual Architecture: https://github.com/hashim93a/eecs4314MYSQL/raw/master/Assignments/Assignment1/MySQL_Conceptual_Architecture.pptx
 
 # Reports
 MySQL Conceptual Architecture: https://github.com/hashim93a/eecs4314MYSQL/raw/master/Assignments/Assignment1/Conceptual_Architecture_Report.pdf
