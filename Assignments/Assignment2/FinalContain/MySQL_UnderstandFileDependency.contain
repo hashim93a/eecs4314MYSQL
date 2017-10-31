@@ -5,10 +5,12 @@ contain ApplicationLayer mysql-server-mysql-8.0.2/libmysql
 contain ApplicationLayer mysql-server-mysql-8.0.2/vio
 
 contain mysql-server-mysql-8.0.2 LogicalLayer
-contain LogicalLayer mysql-server-mysql-8.0.2/StorageManagement
-contain LogicalLayer mysql-server-mysql-8.0.2/QueryProcessor
-contain LogicalLayer mysql-server-mysql-8.0.2/TransactionManagement
-contain LogicalLayer mysql-server-mysql-8.0.2/RecoveryManagement
+
+contain LogicalLayer RecoveryManagement
+contain LogicalLayer StorageManagement
+contain LogicalLayer QueryProcessor
+contain LogicalLayer TransactionManagement
+contain LogicalLayer SystemConcurrencyManagement
 contain LogicalLayer mysql-server-mysql-8.0.2/storage
 
 contain mysql-server-mysql-8.0.2 PhysicalLayer
@@ -34,69 +36,79 @@ contain GeneralUtilities mysql-server-mysql-8.0.2/scripts
 contain GeneralUtilities mysql-server-mysql-8.0.2/extra
 contain GeneralUtilities mysql-server-mysql-8.0.2/testclients
 
-contain mysql-server-mysql-8.0.2/QueryProcessor mysql-server-mysql-8.0.2/QueryProcessor/QueryOptimizer
-contain mysql-server-mysql-8.0.2/QueryProcessor mysql-server-mysql-8.0.2/QueryProcessor/QueryCompiler
-contain mysql-server-mysql-8.0.2/QueryProcessor mysql-server-mysql-8.0.2/QueryProcessor/ExecutionEngine
-contain mysql-server-mysql-8.0.2/QueryProcessor/QueryCompiler mysql-server-mysql-8.0.2/storage/innobase/pars/pars0pars.cc
-contain mysql-server-mysql-8.0.2/QueryProcessor/QueryCompiler mysql-server-mysql-8.0.2/storage/innobase/pars/lexyy.cc
-contain mysql-server-mysql-8.0.2/QueryProcessor/QueryCompiler mysql-server-mysql-8.0.2/storage/innobase/pars/pars0grm.cc
-contain mysql-server-mysql-8.0.2/QueryProcessor/QueryCompiler mysql-server-mysql-8.0.2/storage/innobase/pars/pars0sym.cc
-contain mysql-server-mysql-8.0.2/QueryProcessor/QueryOptimizer mysql-server-mysql-8.0.2/storage/innobase/pars/pars0opt.cc
-contain mysql-server-mysql-8.0.2/QueryProcessor/ExecutionEngine mysql-server-mysql-8.0.2/storage/innobase/eval/eval0eval.cc
-contain mysql-server-mysql-8.0.2/QueryProcessor/ExecutionEngine mysql-server-mysql-8.0.2/storage/innobase/eval/eval0proc.cc
-contain mysql-server-mysql-8.0.2/StorageManagement mysql-server-mysql-8.0.2/StorageManagement/StorageManager
-contain mysql-server-mysql-8.0.2/StorageManagement/StorageManager mysql-server-mysql-8.0.2/storage/innobase/fil/fil0fil.cc
-contain mysql-server-mysql-8.0.2/StorageManagement/StorageManager mysql-server-mysql-8.0.2/storage/innobase/fsp/fsp0fsp.cc
-contain mysql-server-mysql-8.0.2/StorageManagement/StorageManager mysql-server-mysql-8.0.2/storage/innobase/fsp/fsp0space.cc
-contain mysql-server-mysql-8.0.2/StorageManagement/StorageManager mysql-server-mysql-8.0.2/storage/innobase/fsp/fsp0sysspace.cc
-contain mysql-server-mysql-8.0.2/StorageManagement/StorageManager mysql-server-mysql-8.0.2/storage/innobase/fsp/fsp0file.cc
-contain mysql-server-mysql-8.0.2/StorageManagement mysql-server-mysql-8.0.2/StorageManagement/BufferManager
-contain mysql-server-mysql-8.0.2/StorageManagement/BufferManager mysql-server-mysql-8.0.2/storage/innobase/buf/buf.h
-contain mysql-server-mysql-8.0.2/StorageManagement/BufferManager mysql-server-mysql-8.0.2/storage/innobase/buf/buf0buddy.cc
-contain mysql-server-mysql-8.0.2/StorageManagement/BufferManager mysql-server-mysql-8.0.2/storage/innobase/buf/buf0buf.cc
-contain mysql-server-mysql-8.0.2/StorageManagement/BufferManager mysql-server-mysql-8.0.2/storage/innobase/buf/buf0dblwr.cc
-contain mysql-server-mysql-8.0.2/StorageManagement/BufferManager mysql-server-mysql-8.0.2/storage/innobase/buf/buf0dump.cc
-contain mysql-server-mysql-8.0.2/StorageManagement/BufferManager mysql-server-mysql-8.0.2/storage/innobase/buf/buf0flu.cc
-contain mysql-server-mysql-8.0.2/StorageManagement/BufferManager mysql-server-mysql-8.0.2/storage/innobase/buf/buf0lru.cc
-contain mysql-server-mysql-8.0.2/StorageManagement/BufferManager mysql-server-mysql-8.0.2/storage/innobase/buf/buf0rea.cc
-contain mysql-server-mysql-8.0.2/StorageManagement/BufferManager mysql-server-mysql-8.0.2/storage/innobase/buf/checksum.cc
-contain mysql-server-mysql-8.0.2/StorageManagement/BufferManager mysql-server-mysql-8.0.2/storage/innobase/buf/buf.cc
-contain mysql-server-mysql-8.0.2/StorageManagement mysql-server-mysql-8.0.2/StorageManagement/ResourceManager
-contain mysql-server-mysql-8.0.2/StorageManagement/ResourceManager mysql-server-mysql-8.0.2/storage/innobase/dict/dict.h
-contain mysql-server-mysql-8.0.2/StorageManagement/ResourceManager mysql-server-mysql-8.0.2/storage/innobase/dict/mem.h
-contain mysql-server-mysql-8.0.2/StorageManagement/ResourceManager mysql-server-mysql-8.0.2/storage/innobase/dict/dict0crea.cc
-contain mysql-server-mysql-8.0.2/StorageManagement/ResourceManager mysql-server-mysql-8.0.2/storage/innobase/dict/dict0stats_bg.cc
-contain mysql-server-mysql-8.0.2/StorageManagement/ResourceManager mysql-server-mysql-8.0.2/storage/innobase/dict/dict0mem.cc
-contain mysql-server-mysql-8.0.2/StorageManagement/ResourceManager mysql-server-mysql-8.0.2/storage/innobase/dict/dict.cc
-contain mysql-server-mysql-8.0.2/StorageManagement/ResourceManager mysql-server-mysql-8.0.2/storage/innobase/dict/dict0upgrade.cc
-contain mysql-server-mysql-8.0.2/StorageManagement/ResourceManager mysql-server-mysql-8.0.2/storage/innobase/dict/dict0dd.cc
-contain mysql-server-mysql-8.0.2/StorageManagement/ResourceManager mysql-server-mysql-8.0.2/storage/innobase/dict/dict0dict.cc
-contain mysql-server-mysql-8.0.2/StorageManagement/ResourceManager mysql-server-mysql-8.0.2/storage/innobase/dict/dict0stats.cc
-contain mysql-server-mysql-8.0.2/StorageManagement/ResourceManager mysql-server-mysql-8.0.2/storage/innobase/dict/dict0load.cc
-contain mysql-server-mysql-8.0.2/StorageManagement/ResourceManager mysql-server-mysql-8.0.2/storage/innobase/dict/mem.cc
-contain mysql-server-mysql-8.0.2/StorageManagement/ResourceManager mysql-server-mysql-8.0.2/storage/innobase/dict/dict0boot.cc
+contain SystemConcurrencyManagement ConcurrencyManager
+contain ConcurrencyManager mysql-server-mysql-8.0.2/storage/innobase/sync/sync0sync.cc
+contain ConcurrencyManager mysql-server-mysql-8.0.2/storage/innobase/sync/sync0arr.cc
+contain ConcurrencyManager mysql-server-mysql-8.0.2/storage/innobase/sync/sync0debug.cc
+contain ConcurrencyManager mysql-server-mysql-8.0.2/storage/innobase/sync/sync0rw.cc
 
 
-contain mysql-server-mysql-8.0.2/TransactionManagement mysql-server-mysql-8.0.2/TransactionManagement/TransactionManager
-contain mysql-server-mysql-8.0.2/TransactionManagement mysql-server-mysql-8.0.2/TransactionManagement/LockManager
-contain mysql-server-mysql-8.0.2/TransactionManagement/TransactionManager mysql-server-mysql-8.0.2/storage/innobase/trx/trx0i_s.cc
-contain mysql-server-mysql-8.0.2/TransactionManagement/TransactionManager mysql-server-mysql-8.0.2/storage/innobase/trx/trx0rec.cc
-contain mysql-server-mysql-8.0.2/TransactionManagement/TransactionManager mysql-server-mysql-8.0.2/storage/innobase/trx/trx0rseg.cc
-contain mysql-server-mysql-8.0.2/TransactionManagement/TransactionManager mysql-server-mysql-8.0.2/storage/innobase/trx/trx0purge.cc
-contain mysql-server-mysql-8.0.2/TransactionManagement/TransactionManager mysql-server-mysql-8.0.2/storage/innobase/trx/trx0undo.cc
-contain mysql-server-mysql-8.0.2/TransactionManagement/TransactionManager mysql-server-mysql-8.0.2/storage/innobase/trx/trx0sys.cc
-contain mysql-server-mysql-8.0.2/TransactionManagement/TransactionManager mysql-server-mysql-8.0.2/storage/innobase/trx/trx0roll.cc
-contain mysql-server-mysql-8.0.2/TransactionManagement/TransactionManager mysql-server-mysql-8.0.2/storage/innobase/trx/trx0trx.cc
-contain mysql-server-mysql-8.0.2/TransactionManagement/LockManager mysql-server-mysql-8.0.2/storage/innobase/lock/lock0wait.cc
-contain mysql-server-mysql-8.0.2/TransactionManagement/LockManager mysql-server-mysql-8.0.2/storage/innobase/lock/lock0iter.cc
-contain mysql-server-mysql-8.0.2/TransactionManagement/LockManager mysql-server-mysql-8.0.2/storage/innobase/lock/lock0lock.cc
-contain mysql-server-mysql-8.0.2/TransactionManagement/LockManager mysql-server-mysql-8.0.2/storage/innobase/lock/lock0prdt.cc
+contain QueryProcessor QueryOptimizer
+contain QueryProcessor QueryCompiler
+contain QueryProcessor ExecutionEngine
+contain QueryCompiler mysql-server-mysql-8.0.2/storage/innobase/pars/pars0pars.cc
+contain QueryCompiler mysql-server-mysql-8.0.2/storage/innobase/pars/lexyy.cc
+contain QueryCompiler mysql-server-mysql-8.0.2/storage/innobase/pars/pars0grm.cc
+contain QueryCompiler mysql-server-mysql-8.0.2/storage/innobase/pars/pars0sym.cc
+contain QueryOptimizer mysql-server-mysql-8.0.2/storage/innobase/pars/pars0opt.cc
+contain ExecutionEngine mysql-server-mysql-8.0.2/storage/innobase/eval/eval0eval.cc
+contain ExecutionEngine mysql-server-mysql-8.0.2/storage/innobase/eval/eval0proc.cc
 
 
-contain mysql-server-mysql-8.0.2/RecoveryManagement mysql-server-mysql-8.0.2/RecoveryManagement/LogManager
-contain mysql-server-mysql-8.0.2/RecoveryManagement mysql-server-mysql-8.0.2/RecoveryManagement/RecoveryManager
-contain mysql-server-mysql-8.0.2/RecoveryManagement/LogManager mysql-server-mysql-8.0.2/storage/innobase/log/log0log.cc
-contain mysql-server-mysql-8.0.2/RecoveryManagement/RecoveryManager mysql-server-mysql-8.0.2/storage/innobase/log/log0recv.cc
+contain StorageManagement StorageManager
+contain StorageManagement BufferManager
+contain StorageManagement ResourceManager
+contain StorageManager mysql-server-mysql-8.0.2/storage/innobase/fil/fil0fil.cc
+contain StorageManager mysql-server-mysql-8.0.2/storage/innobase/fsp/fsp0fsp.cc
+contain StorageManager mysql-server-mysql-8.0.2/storage/innobase/fsp/fsp0space.cc
+contain StorageManager mysql-server-mysql-8.0.2/storage/innobase/fsp/fsp0sysspace.cc
+contain StorageManager mysql-server-mysql-8.0.2/storage/innobase/fsp/fsp0file.cc
+
+contain BufferManager mysql-server-mysql-8.0.2/storage/innobase/buf/buf.h
+contain BufferManager mysql-server-mysql-8.0.2/storage/innobase/buf/buf0buddy.cc
+contain BufferManager mysql-server-mysql-8.0.2/storage/innobase/buf/buf0buf.cc
+contain BufferManager mysql-server-mysql-8.0.2/storage/innobase/buf/buf0dblwr.cc
+contain BufferManager mysql-server-mysql-8.0.2/storage/innobase/buf/buf0dump.cc
+contain BufferManager mysql-server-mysql-8.0.2/storage/innobase/buf/buf0flu.cc
+contain BufferManager mysql-server-mysql-8.0.2/storage/innobase/buf/buf0lru.cc
+contain BufferManager mysql-server-mysql-8.0.2/storage/innobase/buf/buf0rea.cc
+contain BufferManager mysql-server-mysql-8.0.2/storage/innobase/buf/checksum.cc
+contain BufferManager mysql-server-mysql-8.0.2/storage/innobase/buf/buf.cc
+
+contain ResourceManager mysql-server-mysql-8.0.2/storage/innobase/dict/dict.h
+contain ResourceManager mysql-server-mysql-8.0.2/storage/innobase/dict/mem.h
+contain ResourceManager mysql-server-mysql-8.0.2/storage/innobase/dict/dict0crea.cc
+contain ResourceManager mysql-server-mysql-8.0.2/storage/innobase/dict/dict0stats_bg.cc
+contain ResourceManager mysql-server-mysql-8.0.2/storage/innobase/dict/dict0mem.cc
+contain ResourceManager mysql-server-mysql-8.0.2/storage/innobase/dict/dict.cc
+contain ResourceManager mysql-server-mysql-8.0.2/storage/innobase/dict/dict0upgrade.cc
+contain ResourceManager mysql-server-mysql-8.0.2/storage/innobase/dict/dict0dd.cc
+contain ResourceManager mysql-server-mysql-8.0.2/storage/innobase/dict/dict0dict.cc
+contain ResourceManager mysql-server-mysql-8.0.2/storage/innobase/dict/dict0stats.cc
+contain ResourceManager mysql-server-mysql-8.0.2/storage/innobase/dict/dict0load.cc
+contain ResourceManager mysql-server-mysql-8.0.2/storage/innobase/dict/mem.cc
+contain ResourceManager mysql-server-mysql-8.0.2/storage/innobase/dict/dict0boot.cc
+
+
+contain TransactionManagement TransactionManager
+contain TransactionManagement LockManager
+contain TransactionManager mysql-server-mysql-8.0.2/storage/innobase/trx/trx0i_s.cc
+contain TransactionManager mysql-server-mysql-8.0.2/storage/innobase/trx/trx0rec.cc
+contain TransactionManager mysql-server-mysql-8.0.2/storage/innobase/trx/trx0rseg.cc
+contain TransactionManager mysql-server-mysql-8.0.2/storage/innobase/trx/trx0purge.cc
+contain TransactionManager mysql-server-mysql-8.0.2/storage/innobase/trx/trx0undo.cc
+contain TransactionManager mysql-server-mysql-8.0.2/storage/innobase/trx/trx0sys.cc
+contain TransactionManager mysql-server-mysql-8.0.2/storage/innobase/trx/trx0roll.cc
+contain TransactionManager mysql-server-mysql-8.0.2/storage/innobase/trx/trx0trx.cc
+contain LockManager mysql-server-mysql-8.0.2/storage/innobase/lock/lock0wait.cc
+contain LockManager mysql-server-mysql-8.0.2/storage/innobase/lock/lock0iter.cc
+contain LockManager mysql-server-mysql-8.0.2/storage/innobase/lock/lock0lock.cc
+contain LockManager mysql-server-mysql-8.0.2/storage/innobase/lock/lock0prdt.cc
+
+contain RecoveryManagement LogManager
+contain RecoveryManagement RecoveryManager
+contain LogManager mysql-server-mysql-8.0.2/storage/innobase/log/log0log.cc
+contain RecoveryManager mysql-server-mysql-8.0.2/storage/innobase/log/log0recv.cc
 
 contain mysql-server-mysql-8.0.2/extra/rapidjson/example/messagereader mysql-server-mysql-8.0.2/extra/rapidjson/example/messagereader/messagereader.cpp
 contain mysql-server-mysql-8.0.2/storage/ndb/memcache/src mysql-server-mysql-8.0.2/storage/ndb/memcache/src/TableSpec.cc
@@ -3357,10 +3369,6 @@ contain mysql-server-mysql-8.0.2/include/mysql/components/services mysql-server-
 contain mysql-server-mysql-8.0.2/include/mysql/components/services mysql-server-mysql-8.0.2/include/mysql/components/services/group_member_status_listener.h
 contain mysql-server-mysql-8.0.2/include/mysql/components/services mysql-server-mysql-8.0.2/include/mysql/components/services/dynamic_loader.h
 contain mysql-server-mysql-8.0.2/include/mysql/components/services mysql-server-mysql-8.0.2/include/mysql/components/services/persistent_dynamic_loader.h
-contain mysql-server-mysql-8.0.2/storage/innobase/sync mysql-server-mysql-8.0.2/storage/innobase/sync/sync0sync.cc
-contain mysql-server-mysql-8.0.2/storage/innobase/sync mysql-server-mysql-8.0.2/storage/innobase/sync/sync0arr.cc
-contain mysql-server-mysql-8.0.2/storage/innobase/sync mysql-server-mysql-8.0.2/storage/innobase/sync/sync0debug.cc
-contain mysql-server-mysql-8.0.2/storage/innobase/sync mysql-server-mysql-8.0.2/storage/innobase/sync/sync0rw.cc
 contain mysql-server-mysql-8.0.2/plugin/semisync mysql-server-mysql-8.0.2/plugin/semisync/semisync_slave.cc
 contain mysql-server-mysql-8.0.2/plugin/semisync mysql-server-mysql-8.0.2/plugin/semisync/semisync_slave_plugin.cc
 contain mysql-server-mysql-8.0.2/plugin/semisync mysql-server-mysql-8.0.2/plugin/semisync/semisync.cc
@@ -4812,7 +4820,6 @@ contain mysql-server-mysql-8.0.2/storage/innobase mysql-server-mysql-8.0.2/stora
 contain mysql-server-mysql-8.0.2/storage/innobase mysql-server-mysql-8.0.2/storage/innobase/srv
 contain mysql-server-mysql-8.0.2/storage/innobase mysql-server-mysql-8.0.2/storage/innobase/os
 contain mysql-server-mysql-8.0.2/storage/innobase mysql-server-mysql-8.0.2/storage/innobase/lob
-contain mysql-server-mysql-8.0.2/storage/innobase mysql-server-mysql-8.0.2/storage/innobase/sync
 contain mysql-server-mysql-8.0.2/storage/innobase mysql-server-mysql-8.0.2/storage/innobase/fut
 contain mysql-server-mysql-8.0.2/storage/innobase mysql-server-mysql-8.0.2/storage/innobase/ut
 contain mysql-server-mysql-8.0.2/storage/innobase mysql-server-mysql-8.0.2/storage/innobase/ha
