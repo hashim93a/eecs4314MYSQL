@@ -24,7 +24,8 @@ contain PhysicalLayer /mysys_ssl
 contain /mysys mysql-server-mysql-8.0.2/mysys
 contain /mysys_ssl mysql-server-mysql-8.0.2/mysys_ssl
 
-contain mysql-server-mysql-8.0.2 GeneralUtilities
+
+contain PhysicalLayer GeneralUtilities
 contain GeneralUtilities /cmake
 contain GeneralUtilities /mysql-test
 contain GeneralUtilities /utilities
