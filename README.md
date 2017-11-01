@@ -9,7 +9,7 @@ Richard Van
 
 # Presentations
 MySQL Conceptual Architecture: https://github.com/hashim93a/eecs4314MYSQL/raw/master/Assignments/Assignment1/MySQL_Conceptual_Architecture.pptx
-MySQL Concrete Architecture (Storage Manager): https://github.com/hashim93a/eecs4314MYSQL/raw/master/Assignments/Assignment2/MySQL%20concrete%20architecture%20(Storage%20manager)%20presentation.pdf
+MySQL Concrete Architecture (Storage Manager): https://github.com/hashim93a/eecs4314MYSQL/raw/master/Assignments/Assignment2/MySQL_concrete_architecture_(Storage%20manager)_presentation.pdf
 
 # Reports
 MySQL Conceptual Architecture: https://github.com/hashim93a/eecs4314MYSQL/raw/master/Assignments/Assignment1/Conceptual_Architecture_Report.pdf
