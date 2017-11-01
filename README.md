@@ -8,12 +8,12 @@ Hashim Al-Helli
 Richard Van
 
 # Presentations
-MySQL Conceptual Architecture: https://github.com/hashim93a/eecs4314MYSQL/raw/master/Assignments/Assignment1/MySQL_Conceptual_Architecture.pptx
+A1) MySQL Conceptual Architecture: https://github.com/hashim93a/eecs4314MYSQL/raw/master/Assignments/Assignment1/MySQL_Conceptual_Architecture.pptx
 
-MySQL Concrete Architecture (Storage Manager): https://github.com/hashim93a/eecs4314MYSQL/raw/master/Assignments/Assignment2/MySQL_concrete_architecture_(Storage%20manager)_presentation.pdf
+A2) MySQL Concrete Architecture (Storage Manager): https://github.com/hashim93a/eecs4314MYSQL/raw/master/Assignments/Assignment2/MySQL_concrete_architecture_(Storage%20manager)_presentation.pdf
 
 # Reports
-MySQL Conceptual Architecture: https://github.com/hashim93a/eecs4314MYSQL/raw/master/Assignments/Assignment1/Conceptual_Architecture_Report.pdf
+A1) MySQL Conceptual Architecture: https://github.com/hashim93a/eecs4314MYSQL/raw/master/Assignments/Assignment1/Conceptual_Architecture_Report.pdf
 
 # Links
 Course Webpage : https://wiki.eecs.yorku.ca/course_archive/2017-18/F/4314/    
