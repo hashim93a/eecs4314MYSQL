@@ -16,7 +16,7 @@ A2) MySQL Concrete Architecture (Storage Management): https://github.com/hashim9
 A1) MySQL Conceptual Architecture: https://github.com/hashim93a/eecs4314MYSQL/raw/master/Assignments/Assignment1/Conceptual_Architecture_Report.pdf
 
 A2) MySQL Concrete Architecture (Storage Management)
-https://github.com/hashim93a/eecs4314MYSQL/raw/master/Assignments/Assignment2/Storage_Manager_Concrete_Architecture_Report.pdf
+https://github.com/hashim93a/eecs4314MYSQL/raw/master/Assignments/Assignment2/Storage_Management_Concrete_Architecture_Report.pdf
 
 # Links
 Course Webpage : https://wiki.eecs.yorku.ca/course_archive/2017-18/F/4314/    
