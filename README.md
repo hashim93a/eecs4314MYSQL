@@ -12,6 +12,9 @@ A1) MySQL Conceptual Architecture: https://github.com/hashim93a/eecs4314MYSQL/ra
 
 A2) MySQL Concrete Architecture (Storage Management): https://github.com/hashim93a/eecs4314MYSQL/raw/master/Assignments/Assignment2/MySQL_concrete_architecture_(Storage%20manager).pptx
 
+A3) Dependecy Extraction Techniques
+https://github.com/hashim93a/eecs4314MYSQL/raw/master/Assignments/Assignment3/A3_Dependency_Extraction.pptx
+
 # Reports
 A1) MySQL Conceptual Architecture: https://github.com/hashim93a/eecs4314MYSQL/raw/master/Assignments/Assignment1/Conceptual_Architecture_Report.pdf
 
