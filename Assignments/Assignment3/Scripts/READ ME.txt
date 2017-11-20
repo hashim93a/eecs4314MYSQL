@@ -1,0 +1,26 @@
+This file will explain what each script does and what is needed to run it.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Include.Java:
+
+- This is the include script written by our group to find the include dependencies of Mysql project.
+- To use the script modify the file variables accordingly to point to the location of mysql project in your machine.
+- It will take the script around 5 mins to run and will create the include_dependencies txt file.
+
+
+Comparison.Java:
+
+- This program is written so that it finds the overlapping between the include script output and the understand .csv file output Assuming the understand output uses the long name for the file output.
+- To use the program just point the vairables to where your Include output file is, and to where your understand csv or txt file is.
+- It will take the script around 3 min to run and will create the include vs understand txt file. 
+
+AnalyzeDependencies.java: 
+
+- This is the main comparison program. It will compare all files and output some formatted comparisons plus full lists of total dependencies for each comparison.
+- There must be two directories “dst_files” and “src_files” before running. Place the TA files in the “src_files” folder. 
+
+GetRelativeFilepaths.java:
+
+- When the comparison tools are first run, they only output file names as the dependencies and not relative file paths. These relative paths are necessary to do qualitative comparisons later. 
+- This program will read the input csv files and append relative file paths to the dependencies
+- Create two directories “dst_files” and “src_files” before running. Place the text file with all relative file paths in the “src_files” folder as well as the csv files that need to have relative file paths added.

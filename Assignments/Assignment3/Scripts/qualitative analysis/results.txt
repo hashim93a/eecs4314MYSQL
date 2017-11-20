@@ -1,0 +1,26 @@
+Sample Size: 382
+Understand Dependencies in sample size: 321
+Percentage in sample size: 84%
+Include Dependencies in sample size: 150
+Percentage in sample size: 39%
+srcML Dependencies in sample size: 204
+Percentage in sample size: 53%
+
+Precision and Recall for srcML method
+TP: 321.0, FP: 150.0, FN: 61.0
+Precision = TP/(TP + FP)
+Precision = 321.0/(321.0 + 150.0)
+Precision = 68%
+Recall = TP/(TP + FN)
+Recall = 321.0/(321.0 + 61.0)
+Recall = 84%
+
+Precision and Recall for Include method
+TP: 321.0, FP: 204.0, FN: 61.0
+Precision = TP/(TP + FP)
+Precision = 321.0/(321.0 + 204.0)
+Precision = 61%
+Recall = TP/(TP + FN)
+Recall = 321.0/(321.0 + 61.0)
+Recall = 84%
+
