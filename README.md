@@ -28,6 +28,7 @@ A3) Dependecy Extraction Techniques:
 https://github.com/hashim93a/eecs4314MYSQL/raw/master/Assignments/Assignment3/A3_Dependency_Extraction_Report.pdf
 
 A4) Architectural Enhancement:
+https://github.com/hashim93a/eecs4314MYSQL/raw/master/Assignments/Assignment4/A4_MySQL_Feature_Enhancement_Report.pdf
 
 # Links
 Course Webpage : https://wiki.eecs.yorku.ca/course_archive/2017-18/F/4314/    
